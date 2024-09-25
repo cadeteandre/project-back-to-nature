@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Urbanist";
+  src: url(../fonts/Urbanist-Regular.ttf);
+}
+@font-face {
+  font-family: "Urbanist-bold";
+  src: url(../fonts/Urbanist-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.btn {
+  border: 0.1rem solid #000;
+  border-radius: 4rem;
+  background-color: #fff;
+  margin: 0;
+  padding: 1rem;
+  width: 68vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: "";
+  box-shadow: 0.2rem 0.6rem 0.6rem #000;
+}
+
+.btn__green {
+  border: 0.1rem solid #000;
+  border-radius: 4rem;
+  background-color: #A9CBA6;
+  margin: 0;
+  padding: 1rem;
+  width: 68vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: "";
+  box-shadow: 0.2rem 0.6rem 0.6rem #000;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  margin: 15px auto;
+  padding: 10px;
+  width: 90%;
+  height: 10vh;
+  border: 1px solid #000;
+  border-radius: 30px;
+  /* navbar */
+  /* styling hamburger icon */
+  /* links style */
+  /* when active */
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-direction: row-reverse;
+}
+header .hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 2rem;
+  width: 2.6rem;
+}
+header .hamburger .line {
+  background-color: #000;
+  height: 0.3rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  transition: 0.3s;
+}
+header .nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0 10px;
+  margin-top: 360px;
+  z-index: 2;
+}
+header .nav-links li {
+  margin: 1.5rem 0;
+}
+header .nav-links li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+header .nav-links.active {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+main section:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+main section:nth-of-type(1) .site__title {
+  margin: 1rem 1rem 0 1rem;
+  padding: 0;
+  width: 350.98px;
+  height: 178.74px;
+  background-image: url(../images/Ilustration_Header\ 1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main section:nth-of-type(1) .site__title h2 {
+  font-size: 3.6rem;
+  font-family: "Urbanist-bold";
+  text-align: " ";
+  color: #000;
+  margin: 4.4rem 0 5rem 5rem;
+  padding: 0;
+  width: 36vw;
+  height: 10vh;
+}
+main section:nth-of-type(1) .nature__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+main section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-image: url(../images/bg-green1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 28%;
+}
+main section:nth-of-type(2) h1 {
+  font-size: 3.8rem;
+  font-family: "Urbanist-bold";
+  text-align: center;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  width: 80vw;
+  height: 12vh;
+}
+main section:nth-of-type(2) p {
+  font-size: 1.4rem;
+  font-family: "Urbanist";
+  text-align: center;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  width: 80vw;
+  height: 12vh;
+}
+main section:nth-of-type(2) .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+main section:nth-of-type(2) .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: auto;
+  padding: 1rem;
+  width: 66vw;
+  height: 44vh;
+  border: 0.1rem solid #000;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+  }
+  .nav-links li {
+    margin-left: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

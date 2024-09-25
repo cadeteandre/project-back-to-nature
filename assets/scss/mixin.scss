@@ -1,0 +1,27 @@
+@mixin generalStyle($mr, $pd, $w, $h) {
+    margin: $mr;
+    padding: $pd;
+    width: $w;
+    height: $h;
+}
+
+@mixin displayFlex($flex, $fd, $ali, $jc, $gp) {
+    display: $flex;
+    flex-direction: $fd;
+    align-items: $ali;
+    justify-content: $jc;
+    gap: $gp;
+}
+
+@mixin textStyle($fz, $ff, $textAli, $tc: #000) {
+    font-size: $fz;
+    font-family: $ff;
+    text-align: $textAli;
+    color: $tc;
+}
+
+@mixin boxStyle($bd, $bdr, $bgc: #fff) {
+    border: $bd;
+    border-radius: $bdr;
+    background-color: $bgc;
+}

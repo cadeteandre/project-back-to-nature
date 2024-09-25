@@ -1,0 +1,186 @@
+@use "./mixin.scss";
+
+@font-face {
+    font-family: "Urbanist";
+    src: url(../fonts/Urbanist-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Urbanist-bold";
+    src: url(../fonts/Urbanist-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist";
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@mixin generalStyle($cl) {
+    background-color: $cl;
+}
+
+// -------------- Buttons Styling --------------
+.btn {
+    @include mixin.boxStyle(0.1rem solid #000, 4rem);
+    @include mixin.generalStyle(0, 1rem, 68vw, 8vh);
+    @include mixin.displayFlex(flex, row, center, space-between, "");
+    box-shadow: 0.2rem 0.6rem 0.6rem #000; //need to improve that
+
+}
+.btn__green {
+    @include mixin.boxStyle(0.1rem solid #000, 4rem, #A9CBA6);
+    @include mixin.generalStyle(0, 1rem, 68vw, 8vh);
+    @include mixin.displayFlex(flex, row, center, space-between, "");
+    box-shadow: 0.2rem 0.6rem 0.6rem #000; //need to improve that
+}
+
+// ======== Header Styling ========
+
+header {
+    @include mixin.displayFlex(flex, row, center, space-between, 0);
+    @include mixin.generalStyle(15px auto, 10px, 90%, 10vh);
+    border: 1px solid #000;
+    border-radius: 30px;
+
+    /* navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        flex-direction: row-reverse;
+    }
+
+    /* styling hamburger icon */
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 2rem;
+        width: 2.6rem;
+    }
+
+    .hamburger .line {
+        background-color: #000;
+        height: 0.3rem;
+        width: 100%;
+        border-radius: 0.2rem;
+        transition: 0.3s;
+    }
+
+    /* links style */
+    .nav-links {
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 0 10px;
+        margin-top: 360px; // Need to improve that.
+        z-index: 2;
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+
+    .nav-links li a {
+        color: #000;
+        text-decoration: none;
+        font-size: 1.8rem;
+    }
+
+    /* when active */
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+// ======== Main Styling ========
+
+main {
+
+    @include mixin.displayFlex(flex, column, center, center, 6rem);
+
+    section {
+        &:nth-of-type(1) {
+            @include mixin.displayFlex(flex, column, center, center, 0);
+            .site__title {
+                @include mixin.generalStyle(1rem 1rem 0 1rem, 0, 350.98px, 178.74px);
+                background-image: url(../images/Ilustration_Header\ 1.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+        
+                h2 {
+                    @include mixin.textStyle(3.6rem, "Urbanist-bold", " ", #000);
+                    @include mixin.generalStyle(4.4rem 0 5rem 5rem, 0, 36vw, 10vh);
+                }
+            }
+        
+            .nature__buttons {
+                // @include mixin.generalStyle();
+                @include mixin.displayFlex(flex, column, center, center, 2rem);
+            }
+        }
+
+        &:nth-of-type(2) {
+            @include mixin.displayFlex(flex, column, center, center, 2rem);
+            background-image: url(../images/bg-green1.png);
+            background-repeat: no-repeat;
+            background-size: 100% 28%;
+            // border: 0.1rem solid red;
+        
+            h1 {
+                @include mixin.textStyle(3.8rem, "Urbanist-bold", center, #000);
+                @include mixin.generalStyle(0, 0, 80vw, 12vh);
+            }
+        
+            p {
+                @include mixin.textStyle(1.4rem, "Urbanist", center, #000);
+                @include mixin.generalStyle(0, 0, 80vw, 12vh);
+            }
+
+            .cards {
+                @include mixin.displayFlex(flex, column, center, center, 2rem);
+
+            }
+
+            .card {
+                @include mixin.displayFlex(flex, column, center, center, 3rem);
+                @include mixin.generalStyle(auto, 1rem, 66vw, 44vh);
+                @include mixin.boxStyle(0.1rem solid #000, 2rem, #fff);
+            }
+        }
+    }
+
+}
+
+
+
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none; 
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .nav-links li {
+        margin-left: 2rem;
+    }
+}
