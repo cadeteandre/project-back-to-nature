@@ -6,6 +6,14 @@
   font-family: "Urbanist-bold";
   src: url(../fonts/Urbanist-Bold.ttf);
 }
+@font-face {
+  font-family: "Urbanist-semibold";
+  src: url(../fonts/Urbanist-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Urbanist-light";
+  src: url(../fonts/Urbanist-Light.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +23,31 @@
 
 html {
   font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.4rem;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3.8rem;
+  font-family: "Urbanist-bold";
+  text-align: center;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  width: 80vw;
+  height: 12vh;
 }
 
 .btn {
@@ -34,6 +67,7 @@ html {
 }
 
 .btn__green {
+  color: #FFF;
   border: 0.1rem solid #000;
   border-radius: 4rem;
   background-color: #A9CBA6;
@@ -112,11 +146,21 @@ header .nav-links.active {
 }
 
 main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: "";
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 6rem;
+}
+main section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: "";
 }
 main section:nth-of-type(1) {
   display: flex;
@@ -124,26 +168,6 @@ main section:nth-of-type(1) {
   align-items: center;
   justify-content: center;
   gap: 0;
-}
-main section:nth-of-type(1) .site__title {
-  margin: 1rem 1rem 0 1rem;
-  padding: 0;
-  width: 350.98px;
-  height: 178.74px;
-  background-image: url(../images/Ilustration_Header\ 1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-main section:nth-of-type(1) .site__title h2 {
-  font-size: 3.6rem;
-  font-family: "Urbanist-bold";
-  text-align: " ";
-  color: #000;
-  margin: 4.4rem 0 5rem 5rem;
-  padding: 0;
-  width: 36vw;
-  height: 10vh;
 }
 main section:nth-of-type(1) .nature__buttons {
   display: flex;
@@ -160,17 +184,7 @@ main section:nth-of-type(2) {
   gap: 2rem;
   background-image: url(../images/bg-green1.png);
   background-repeat: no-repeat;
-  background-size: 100% 28%;
-}
-main section:nth-of-type(2) h1 {
-  font-size: 3.8rem;
-  font-family: "Urbanist-bold";
-  text-align: center;
-  color: #000;
-  margin: 0;
-  padding: 0;
-  width: 80vw;
-  height: 12vh;
+  background-size: 100% 26%;
 }
 main section:nth-of-type(2) p {
   font-size: 1.4rem;
@@ -194,7 +208,7 @@ main section:nth-of-type(2) .card {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   margin: auto;
   padding: 1rem;
   width: 66vw;
@@ -202,19 +216,476 @@ main section:nth-of-type(2) .card {
   border: 0.1rem solid #000;
   border-radius: 2rem;
   background-color: #fff;
+  box-shadow: 0.2rem 0.6rem 0.6rem #000;
+}
+main section:nth-of-type(2) h3 {
+  font-size: 2rem;
+  font-family: "Urbanist.semibold";
+  text-align: center;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  width: 31vw;
+  height: "";
+}
+main section:nth-of-type(2) .card p {
+  font-size: 1.4rem;
+  font-family: "Urbanist-light";
+  text-align: center;
+  color: #000;
+  margin: auto;
+  padding: "";
+  width: 28vw;
+  height: "";
+  line-height: 2.4rem;
+  letter-spacing: 0.037rem;
+}
+main section:nth-of-type(2) .btn__green {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+main section:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background-image: url(../images/Bg-Bulb.png);
+  background-repeat: no-repeat;
+  background-size: 100% 10%;
+}
+main section:nth-of-type(3) h1 {
+  margin: 0;
+  padding: 0;
+  width: 80vw;
+  height: 8vh;
+}
+main section:nth-of-type(3) p {
+  font-size: 1.6rem;
+  font-family: "Urbanist";
+  text-align: center;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  width: 86vw;
+  height: 16vh;
+  line-height: 2.7rem;
+}
+main section:nth-of-type(3) .cards {
+  margin: 8rem 0;
+  padding: 4rem 2rem;
+  width: 100vw;
+  height: "";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+main section:nth-of-type(3) .card {
+  margin: 0;
+  padding: 0;
+  width: 80vw;
+  height: "";
+  border: 0.2rem solid #000;
+  border-radius: 4rem;
+  background-color: #fff;
+}
+main section:nth-of-type(3) .img-van {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: "";
+}
+main section:nth-of-type(3) .price span {
+  font-size: 2rem;
+  font-family: "Urbanist-bold";
+  text-align: center;
+  color: #000;
+}
+main section:nth-of-type(3) .offer {
+  background-color: #F0CEA0;
+  border: 0.1rem solid #000;
+  border-radius: 0 0 4rem 4rem;
+  margin-top: -0.4rem;
+  padding: 1.6rem 2rem;
+}
+main section:nth-of-type(3) .headline__price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+main section:nth-of-type(3) .headline__price h1 {
+  margin: 0;
+  padding: 0;
+  width: 22vw;
+  height: 5vh;
+}
+main section:nth-of-type(3) .price {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.6rem;
+}
+main section:nth-of-type(3) .price h3 {
+  font-size: 3.4rem;
+  font-family: "Urbanist-bold";
+  text-align: center;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  width: "";
+  height: "";
+}
+main section:nth-of-type(3) .services {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+main section:nth-of-type(3) .services p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: "";
+  gap: 1rem;
+  margin: 0;
+  padding: 2rem 0;
+  width: 56vw;
+  height: 5vh;
+  font-size: 1.4rem;
+  font-family: "Urbanist";
+  text-align: center;
+  color: #000;
+  text-align: left;
+}
+main section:nth-of-type(3) .services button {
+  font-size: 1.5rem;
+  font-family: "Urbanist-bold";
+  text-align: center;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: "";
+}
+main section:nth-of-type(3) .services .btn__green {
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 0.1rem solid #000;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+footer .social__media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
 }
 
 @media (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
-  .nav-links {
-    display: flex;
+  header .nav-links {
     flex-direction: row;
     margin-top: 0;
+    gap: 2rem;
   }
-  .nav-links li {
-    margin-left: 2rem;
+  header .nav-links li a {
+    font-size: 1.4rem;
+  }
+  header .nav-links.active {
+    flex-direction: row;
+  }
+  main section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: "";
+    gap: 0;
+  }
+  main section:nth-of-type(1) .bg__hero {
+    display: block;
+    margin: 0 2rem;
+    padding: 0;
+    width: 100%;
+    height: "";
+    border: 0.1rem solid red;
+  }
+  main section:nth-of-type(1) .nature__buttons {
+    border: 0.1rem solid red;
+    margin-top: 8rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  main section:nth-of-type(1) .nature__buttons button {
+    font-size: 2.4rem;
+  }
+  main section:nth-of-type(1) .nature__buttons .btn, main section:nth-of-type(1) .nature__buttons .btn__green {
+    width: 36vw;
+    height: 5vh;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    margin: auto;
+    max-width: 144rem;
+  }
+  .btn {
+    margin: 0;
+    padding: 1rem;
+    width: 20vw;
+    height: 6vh;
+  }
+  .btn__green {
+    margin: 0;
+    padding: 1rem;
+    width: 20vw;
+    height: 6vh;
+  }
+  header .hamburger {
+    display: none;
+  }
+  header .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0;
+  }
+  header .special__link {
+    font-family: "Urbanist-bold";
+    border-bottom: 0.1rem solid #000;
+  }
+  main section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: "";
+    gap: 0;
+    margin: 1rem 1rem 0 1rem;
+    padding: 0;
+    width: 100%;
+    height: 60vh;
+  }
+  main section:nth-of-type(1) .nature__buttons {
+    margin: 14rem 0 0 0;
+    padding: 0;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  main section:nth-of-type(1) .site__title h2 {
+    font-size: 8rem;
+    font-family: "Urbanist-bold";
+    text-align: "";
+    color: #000;
+    margin: 12rem 0 0 26rem;
+    padding: 0;
+    width: 22vw;
+    height: 18vh;
+  }
+  main section:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    background-image: url(../images/bg-green2.png);
+    background-size: 35% 100%;
+  }
+  main section:nth-of-type(2) h1 {
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    height: 6vh;
+  }
+  main section:nth-of-type(2) p {
+    margin: 0;
+    padding: 0;
+    width: 40vw;
+    height: 4vh;
+  }
+  main section:nth-of-type(2) .cards {
+    margin: 0;
+    padding: 0 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  main section:nth-of-type(2) .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: auto;
+    padding: 1rem;
+    width: 15vw;
+    height: 30vh;
+    border: 0.1rem solid #000;
+    border-radius: 2rem;
+    background-color: #fff;
+    box-shadow: 0.2rem 0.6rem 0.6rem #000;
+  }
+  main section:nth-of-type(2) .card p {
+    font-size: 1.4rem;
+    font-family: "Urbanist-light";
+    text-align: center;
+    color: #000;
+    margin: auto;
+    padding: "";
+    width: 10vw;
+    height: 6vh;
+    line-height: 2.4rem;
+    letter-spacing: 0.037rem;
+  }
+  main section:nth-of-type(2) .card img {
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    height: 16vh;
+  }
+  main section:nth-of-type(2) h3 {
+    font-size: 1.8rem;
+    font-family: "Urbanist.semibold";
+    text-align: center;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    width: 8.4vw;
+    height: "";
+  }
+  main section:nth-of-type(3) {
+    background-size: 100% 100%;
+    padding: 4rem;
+  }
+  main section:nth-of-type(3) h1 {
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    height: 8vh;
+  }
+  main section:nth-of-type(3) p {
+    font-size: 1.6rem;
+    font-family: "Urbanist";
+    text-align: center;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    width: 40vw;
+    height: 16vh;
+    line-height: 2.7rem;
+  }
+  main section:nth-of-type(3) .cards {
+    margin: 0;
+    padding: 2rem;
+    width: 100vw;
+    height: "";
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  main section:nth-of-type(3) .card {
+    margin: 0;
+    padding: 0;
+    width: 26vw;
+    height: "";
+    border: 0.2rem solid #000;
+    border-radius: 4rem;
+    background-color: #fff;
+  }
+  main section:nth-of-type(3) .offer {
+    padding: 0.6rem 2rem;
+  }
+  main section:nth-of-type(3) .headline__price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+  main section:nth-of-type(3) .headline__price h1 {
+    margin: 0;
+    padding: 0;
+    width: 8vw;
+    height: 5vh;
+  }
+  main section:nth-of-type(3) .price {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  main section:nth-of-type(3) .price h3 {
+    font-size: 3.4rem;
+    font-family: "Urbanist-bold";
+    text-align: center;
+    color: #000;
+  }
+  main section:nth-of-type(3) .services {
+    gap: 0;
+    align-items: center;
+  }
+  main section:nth-of-type(3) .services p {
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0;
+    width: 22.5vw;
+    height: 5vh;
+    font-size: 1.4rem;
+    font-family: "Urbanist";
+    text-align: center;
+    color: #000;
+    text-align: left;
+  }
+  main section:nth-of-type(3) .services button {
+    margin: 0.6rem 0;
+    font-size: 1.5rem;
+    font-family: "Urbanist-bold";
+    text-align: center;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: "";
+  }
+  footer nav {
+    flex-direction: row;
   }
 }
 
