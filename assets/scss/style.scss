@@ -4,47 +4,38 @@
     font-family: "Urbanist";
     src: url(../fonts/Urbanist-Regular.ttf);
 }
-
 @font-face {
     font-family: "Urbanist-bold";
     src: url(../fonts/Urbanist-Bold.ttf);
 }
-
 @font-face {
     font-family: "Urbanist-semibold";
     src: url(../fonts/Urbanist-SemiBold.ttf);
 }
-
 @font-face {
     font-family: "Urbanist-light";
     src: url(../fonts/Urbanist-Light.ttf);
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Urbanist";
 }
-
 html {
     font-size: 62.5%;
 }
-
 a {
     text-decoration: none;
     color: #000;
     font-size: 1.4rem;
 }
-
 a:hover {
     cursor: pointer;
 }
-
 button:hover {
     cursor: pointer;
 }
-
 h1 {
     @include mixin.textStyle(3.8rem, "Urbanist-bold", center, #000);
     @include mixin.generalStyle(0, 0, 80vw, 12vh);
@@ -55,7 +46,6 @@ h1 {
     @include mixin.boxStyle(0.1rem solid #000, 4rem);
     @include mixin.generalStyle(0, 1rem, 68vw, 8vh);
     @include mixin.displayFlex(flex, row, center, space-between, "");
-    box-shadow: 0.2rem 0.6rem 0.6rem #000; //need to improve that
 
 }
 .btn__green {
@@ -63,7 +53,6 @@ h1 {
     @include mixin.boxStyle(0.1rem solid #000, 4rem, #A9CBA6);
     @include mixin.generalStyle(0, 1rem, 68vw, 8vh);
     @include mixin.displayFlex(flex, row, center, space-between, "");
-    box-shadow: 0.2rem 0.6rem 0.6rem #000; //need to improve that
 }
 
 // ======== Header Styling ========
@@ -72,7 +61,7 @@ header {
     @include mixin.displayFlex(flex, row, center, space-between, 0);
     @include mixin.generalStyle(15px auto, 10px, 90%, 10vh);
     border: 1px solid #000;
-    border-radius: 30px;
+    border-radius: 5rem;
 
     /* navbar */
     .navbar {
@@ -82,7 +71,6 @@ header {
         padding: 2rem;
         flex-direction: row-reverse;
     }
-
     /* styling hamburger icon */
     .hamburger {
         cursor: pointer;
@@ -92,7 +80,6 @@ header {
         height: 2rem;
         width: 2.6rem;
     }
-
     .hamburger .line {
         background-color: #000;
         height: 0.3rem;
@@ -100,7 +87,6 @@ header {
         border-radius: 0.2rem;
         transition: 0.3s;
     }
-
     /* links style */
     .nav-links {
         list-style: none;
@@ -112,17 +98,14 @@ header {
         margin-top: 360px; // Need to improve that.
         z-index: 2;
     }
-
     .nav-links li {
         margin: 1.5rem 0;
     }
-
     .nav-links li a {
         color: #000;
         text-decoration: none;
         font-size: 1.8rem;
     }
-
     /* when active */
     .nav-links.active {
         display: flex;
@@ -154,37 +137,30 @@ main {
             background-image: url(../images/bg-green1.png);
             background-repeat: no-repeat;
             background-size: 100% 26%;
-            // border: 0.1rem solid red;
-        
+
             p {
                 @include mixin.textStyle(1.4rem, "Urbanist", center, #000);
                 @include mixin.generalStyle(0, 0, 80vw, 12vh);
             }
-
             .cards {
                 @include mixin.displayFlex(flex, column, center, center, 2rem);
-
             }
-
             .card {
                 @include mixin.displayFlex(flex, column, center, center, 2rem);
                 @include mixin.generalStyle(auto, 1rem, 66vw, 44vh);
                 @include mixin.boxStyle(0.1rem solid #000, 2rem, #fff);
-                box-shadow: 0.2rem 0.6rem 0.6rem #000; //need to improve that
+                box-shadow: #00000049 -4px -4px 4px inset; 
             }
-
             h3 {
                 @include mixin.textStyle(2rem, "Urbanist.semibold", center, #000);
                 @include mixin.generalStyle(0, 0, 31vw, "");
             }
-
             .card p {
                 @include mixin.textStyle(1.4rem, "Urbanist-light", center, #000);
                 @include mixin.generalStyle(auto, "", 28vw, "");
                 line-height: 2.4rem;
                 letter-spacing: 0.037rem;
             }
-
             .btn__green {
                 @include mixin.displayFlex(flex, row, center, flex-start, 5rem);
             }
@@ -198,31 +174,25 @@ main {
             h1 {
                 @include mixin.generalStyle(0, 0, 80vw, 8vh);
             }
-
             p {
                 @include mixin.textStyle(1.6rem, "Urbanist", center, #000);
                 @include mixin.generalStyle(0, 0, 86vw, 16vh);
                 line-height: 2.7rem
             }
-
             .cards {
                 @include mixin.generalStyle(8rem 0, 4rem 2rem, 100vw, "");
                 @include mixin.displayFlex(flex, column, center, center, 2rem);
             }
-
             .card {
                 @include mixin.generalStyle(0, 0, 80vw, "");
-                @include mixin.boxStyle(0.2rem solid #000, 4rem);
+                @include mixin.boxStyle(0.1rem solid #000, 4rem);
             }
-
             .img-van {
                 @include mixin.generalStyle(0, 0, 100%, "");
             }
-
             .price span {
                 @include mixin.textStyle(2rem, "Urbanist-bold", center, #000);
             }
-
             .offer {
                 background-color: #F0CEA0;
                 border: 0.1rem solid #000;
@@ -230,43 +200,35 @@ main {
                 margin-top: -0.4rem;
                 padding: 1.6rem 2rem;
             }
-
             .headline__price {
                 @include mixin.displayFlex(flex, row, center, space-between, 0);
             }
             .headline__price h1 {
                 @include mixin.generalStyle(0, 0, 22vw, 5vh);
             }
-
             .price {
                 @include mixin.displayFlex(flex, row, flex-end, center, 0.6rem);
             }
-
             .price h3 {
                 @include mixin.textStyle(3.4rem, "Urbanist-bold", center, #000);
                 @include mixin.generalStyle(0, 0, "", "");
             }
-
             .services {
                 @include mixin.displayFlex(flex, column, flex-start, center, 1rem);
             }
-
             .services p {
                 @include mixin.displayFlex(flex, row, center, "", 1rem);
                 @include mixin.generalStyle(0, 2rem 0, 56vw, 5vh);
                 @include mixin.textStyle(1.4rem, "Urbanist", center, #000);
                 text-align: left;
             }
-
             .services button {
                 @include mixin.textStyle(1.5rem, "Urbanist-bold", center, #000);
                 @include mixin.displayFlex(flex, row, center, center, "");
             }
-
             .services .btn__green {
                 color: #fff;
             }
-
         }
     }
 
@@ -280,7 +242,6 @@ footer {
     nav {
         @include mixin.displayFlex(flex, column, center, center, 1rem);
     }
-
     .social__media {
         @include mixin.displayFlex(flex, row, center, center, 1.8rem);
     }
@@ -311,186 +272,200 @@ footer {
     main {
         section {
             &:nth-of-type(1) {
-                @include mixin.displayFlex(flex, column, flex-start, "", 0);
-
                 .bg__hero {
-                    display: block;
-                    @include mixin.generalStyle(0 2rem, 0, 100%, "");
-                    border: 0.1rem solid red;
+                    @include mixin.generalStyle(0, 0, 100%, "");
                 }
-
                 .nature__buttons {
-                    border: 0.1rem solid red;
-                    margin-top: 8rem;
+                    margin-top: -8rem;
                     flex-direction: row;
                     flex-wrap: wrap;
                     width: 100%;
-        
                     button {
                         font-size: 2.4rem;
                     }
-        
                     .btn, .btn__green {
                         width: 36vw;
                         height: 5vh;
                     }
                 }
             }
+            &:nth-of-type(2) {
+                background-image: none;
+                gap: 3rem;
+
+                h1 {
+                    @include mixin.generalStyle(0, 0, 56vw, 4vh);
+                }
+                p {
+                    @include mixin.generalStyle(0, 0, 60vw, 4vh);
+                    line-height: 2rem;
+                }
+                .cards {
+                    @include mixin.generalStyle(0, 0 2rem, 100%, 100%);
+                    @include mixin.displayFlex(flex, row, center, center, 2rem);
+                    flex-wrap: wrap;
+                    .card {
+                        @include mixin.displayFlex(flex, column, center, center, 0.6rem);
+                        @include mixin.generalStyle(0, 1rem, 26vw, 28vh);
+                        
+                        img {
+                            @include mixin.generalStyle(0, 0, 12rem, 12rem);
+                        }
+                        h3 {
+                            @include mixin.textStyle(2rem, "Urbanist.semibold", center, #000);
+                            @include mixin.generalStyle(0, 0, 14vw, "");
+                        }
+                        p {
+                            @include mixin.textStyle(1.6rem, "Urbanist-light", center, #000);
+                            @include mixin.generalStyle(auto, "", 18vw, "");
+                            line-height: 2.4rem;
+                            letter-spacing: 0.037rem;
+                        }
+                    }
+                }
+                .btn__green {
+                    font-size: 1.6rem;
+                    @include mixin.generalStyle(0, 1rem, 30vw, 4vh);
+                    @include mixin.displayFlex(flex, row, center, flex-start, 4rem);
+                }
+            }
+            &:nth-of-type(3) {
+                gap: 2rem;
+                padding-top: 3rem;
+                background-size: 100% 30%;
+                h1 {
+                    @include mixin.generalStyle(0, 0, 42vw, 4vh);
+                }
+                p {
+                    @include mixin.textStyle(1.6rem, "Urbanist", center, #000);
+                    @include mixin.generalStyle(0, 0, 60vw, 12vh);
+                    line-height: 2.7rem;
+                }
+                .cards {
+                    @include mixin.generalStyle(0, 2rem, 100vw, "");
+                    @include mixin.displayFlex(flex, row, center, center, 2rem);
+                    flex-wrap: wrap;
+                }
+                .card {
+                    @include mixin.generalStyle(0, 0, 44vw, "");
+                    @include mixin.boxStyle(0.2rem solid #000, 4rem);
+                }
+                .offer {
+                    padding: 0.6rem 2rem;
+                }
+                .headline__price h1 {
+                    @include mixin.generalStyle(0, 0, 8vw, 4vh);
+                }
+                .services {
+                    gap: 1.4rem;
+                    align-items: flex-start;
+                    padding: 2rem 0;
+
+                    p {
+                        gap: 0.4rem;
+                        @include mixin.generalStyle(0, 0, 25vw, 3vh);
+                        text-align: left;
+                    }
+                    button {
+                        margin: 0.6rem 0;
+                        @include mixin.displayFlex(flex, row, center, center, "");
+                        @include mixin.generalStyle(auto, 1rem, 30vw, 4vh);
+                    }
+                }
+            }
         }
     }
     // ======== TABLET Footer Styling ========
+    footer {       
+        nav {
+            flex-direction: row;
+        }
+    }
 }
 
     // ======== DESKTOP ========
 
 @media (min-width: 992px) {
-    body {
-        margin: auto;
-        max-width: 144rem
-    }
-    .btn {
-        @include mixin.generalStyle(0, 1rem, 20vw, 6vh);  
-    }
-    .btn__green {
-        @include mixin.generalStyle(0, 1rem, 20vw, 6vh);
-    }
     // ======== DESKTOP Header Styling ========
     header {
+        overflow: hidden;
         .hamburger {
-            display: none; 
-        }
-        
-        .nav-links {
-            @include mixin.displayFlex(flex, row, center, center, 2rem);
-            margin-top: 0;
+            display: none;
         }
 
-        .special__link {
-            font-family: "Urbanist-bold";
-            border-bottom: 0.1rem solid #000;
+        .nav-links {
+            display: flex;
+            gap: 5rem;
+
+            li {
+                a {
+                    font-size: 1.6rem;
+                }
+                .special__link {
+                    border-bottom: 0.2rem solid #000;
+                    font-family: "Urbanist-bold";
+                }
+            }
         }
     }
     // ======== DESKTOP Main Styling ========
     main {
         section {
             &:nth-of-type(1) {
-                @include mixin.displayFlex(flex, column, flex-start, "", 0);
-                @include mixin.generalStyle(1rem 1rem 0 1rem, 0, 100%, 60vh);
-                
+                .bg__hero {
+                    @include mixin.generalStyle(0, 0, 80%, "");
+                }
+
                 .nature__buttons {
-                    @include mixin.generalStyle(14rem 0 0 0, 0, 100%, 60vh);
-                    @include mixin.displayFlex(flex, row, center, center, 2rem);
-                }
-                .site__title h2 {
-                    @include mixin.textStyle(8rem, "Urbanist-bold", "", #000);
-                    @include mixin.generalStyle(12rem 0 0 26rem, 0, 22vw, 18vh);
+                    flex-wrap: nowrap;
+        
+                    button {
+                        font-size: 2rem;
+                    }
+        
+                    .btn, .btn__green {
+                        width: 22vw;
+                        height: 7vh;
+                    }
                 }
             }
-
             &:nth-of-type(2) {
-                @include mixin.displayFlex(flex, column, center, center, 4rem);
-                background-image: url(../images/bg-green2.png);
-                background-size: 35% 100%;
-
+                gap: 4rem;
                 h1 {
-                    @include mixin.generalStyle(0, 0, 80vw, 6vh);
+                    @include mixin.generalStyle(0, 0, 36vw, 5vh);
                 }
-
                 p {
-                    @include mixin.generalStyle(0, 0, 40vw, 4vh);
+                    @include mixin.generalStyle(0, 0, 40vw, 5vh);
                 }
-
                 .cards {
-                    @include mixin.generalStyle(0, 0 2rem, 100%, 100%);
-                    @include mixin.displayFlex(flex, row, center, center, 0);
-    
+                    flex-wrap: nowrap;
+                    .card {
+                        @include mixin.generalStyle(0, 1rem, 16vw, 35vh);
+
+                        p {
+                            @include mixin.textStyle(1.6rem, "Urbanist-light", center, #000);
+                            @include mixin.generalStyle(auto, "", 12vw, "");
+                            line-height: 2.4rem;
+                            letter-spacing: 0.037rem;
+                        }
+                    }
                 }
-                .card {
-                    @include mixin.displayFlex(flex, column, center, center, 0.6rem);
-                    @include mixin.generalStyle(auto, 1rem, 15vw, 30vh);
-                    @include mixin.boxStyle(0.1rem solid #000, 2rem, #fff);
-                    box-shadow: 0.2rem 0.6rem 0.6rem #000; //need to improve that
-                }
-                .card p {
-                    @include mixin.textStyle(1.4rem, "Urbanist-light", center, #000);
-                    @include mixin.generalStyle(auto, "", 10vw, 6vh);
-                    line-height: 2.4rem;
-                    letter-spacing: 0.037rem;
-                }
-                .card img {
-                    @include mixin.generalStyle(0, 0, 10vw, 16vh);
-                }
-                h3 {
-                    @include mixin.textStyle(1.8rem, "Urbanist.semibold", center, #000);
-                    @include mixin.generalStyle(0, 0, 8.4vw, "");
+                .btn__green {
+                    @include mixin.generalStyle(0, 1rem, 22vw, 7vh);
                 }
             }
-
             &:nth-of-type(3) {
                 background-size: 100% 100%;
-                padding: 4rem;
-                h1 {
-                    @include mixin.generalStyle(0, 0, 80vw, 8vh);
-                }
-    
-                p {
-                    @include mixin.textStyle(1.6rem, "Urbanist", center, #000);
-                    @include mixin.generalStyle(0, 0, 40vw, 16vh);
-                    line-height: 2.7rem;
-                }
-    
-                .cards {
-                    @include mixin.generalStyle(0, 2rem, 100vw, "");
-                    @include mixin.displayFlex(flex, row, center, center, 2rem);
-                }
-    
                 .card {
                     @include mixin.generalStyle(0, 0, 26vw, "");
-                    @include mixin.boxStyle(0.2rem solid #000, 4rem);
                 }
-                .offer {
-                    padding: 0.6rem 2rem;
-                }
-    
-                .headline__price {
-                    @include mixin.displayFlex(flex, row, center, space-between, 0);
-                }
-                .headline__price h1 {
-                    @include mixin.generalStyle(0, 0, 8vw, 5vh);
-                }
-    
-                .price {
-                    @include mixin.displayFlex(flex, row, flex-end, center, 0.6rem);
-                }
-    
-                .price h3 {
-                    @include mixin.textStyle(3.4rem, "Urbanist-bold", center, #000);
-                }
-    
                 .services {
-                    gap: 0;
-                    align-items: center;
-                }
-    
-                .services p {
-                    gap: 0.4rem;
-                    @include mixin.generalStyle(0, 0, 22.5vw, 5vh);
-                    @include mixin.textStyle(1.4rem, "Urbanist", center, #000);
-                    text-align: left;
-                }
-    
-                .services button {
-                    margin: 0.6rem 0;
-                    @include mixin.textStyle(1.5rem, "Urbanist-bold", center, #000);
-                    @include mixin.displayFlex(flex, row, center, center, "");
+                    button {
+                        width: 22vw;
+                        height: 7vh;
+                    }
                 }
             }
-        }
-    }
-    // ======== DESKTOP Footer Styling ========
-    footer {       
-        nav {
-            flex-direction: row;
         }
     }
 }
