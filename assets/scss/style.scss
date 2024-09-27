@@ -307,7 +307,7 @@ footer {
                     .card {
                         @include mixin.displayFlex(flex, column, center, center, 0.6rem);
                         @include mixin.generalStyle(0, 1rem, 26vw, 28vh);
-                        
+
                         img {
                             @include mixin.generalStyle(0, 0, 12rem, 12rem);
                         }
@@ -432,7 +432,7 @@ footer {
             &:nth-of-type(2) {
                 gap: 4rem;
                 h1 {
-                    @include mixin.generalStyle(0, 0, 36vw, 5vh);
+                    @include mixin.generalStyle(0, 0, 38vw, 5vh);
                 }
                 p {
                     @include mixin.generalStyle(0, 0, 40vw, 5vh);
